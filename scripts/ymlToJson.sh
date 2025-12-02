@@ -7,3 +7,4 @@ case "${i#*.}" in
 	*);;
 esac
 yq -p yaml -o json "$i" > "$o"
+echo "$i -> $o"
