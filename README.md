@@ -10,7 +10,7 @@ The end-goal is to add many monsters to the game, along with drops that allow th
 	- [x] `Vampiric Blood`
 		- Strength
 		- Speed
-		- Flight
+		- Flight (Gliding)
 		- Lifesteal
 - [ ] Werewolf
 	- [ ] `Lycan Blood` (Powers only work at night)
