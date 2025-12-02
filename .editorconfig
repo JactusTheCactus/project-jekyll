@@ -4,6 +4,6 @@ indent_style = tab
 tab_width = 4
 trim_trailing_whitespace = true
 max_line_length = 80
-[*.{{y,ya}ml}]
+[*.yml]
 indent_style = space
 indent_size = 2
