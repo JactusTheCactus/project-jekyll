@@ -6,13 +6,13 @@ The end-goal is to add many monsters to the game, along with drops that allow th
 - [ ] Monsters
 - [x] Items that give the powers of monsters
 ## Monsters
-- [x] Vampire
-	- Vampiric Blood
+- [ ] Vampire
+	- [ ] Vampiric Blood
 		- Strength
 		- Speed
 		- Flight
 		- Lifesteal
 - [ ] Werewolf
-	- Lycan Blood (Powers only work at night)
+	- [ ] Lycan Blood (Powers only work at night)
 		- Strength
 		- Resistance
