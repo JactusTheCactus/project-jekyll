@@ -1,6 +1,6 @@
 # Project: Jekyll
 `Project: Jekyll` is a datapack for `Minecraft: Java Edition 1.21.10`.
-The end-goal is to add many monsters to the game, along with drops that allow the player to gain their abilities.
+The end-goal is to add many monsters to the game, along with drops that the player consumes to gain their abilities.
 ## Features
 - [ ] Monsters
 - [x] Items that give the powers of monsters
@@ -16,4 +16,4 @@ The end-goal is to add many monsters to the game, along with drops that allow th
 		- Strength
 		- Resistance
 ## Use
-Currently, as there are no mobs to drop these items, they are given at the start. If they aren't, `/reload` will fix that.
+Currently, as there are no mobs to drop these items, they are given at the start. If they aren't, `/reload` will clear your inventory / potion effects & give the items
