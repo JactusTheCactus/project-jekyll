@@ -7,6 +7,7 @@ The end-goal is to add many monsters to the game, along with drops that allow th
 Current Monsters:
 -----------------
 - Vampire
+
 Planned Monsters:
 -----------------
 - Werewolf
