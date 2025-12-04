@@ -1,0 +1,1 @@
+give @p minecraft:dragon_breath[custom_name="Vampiric Blood",lore=["Heal upon dealing damage","Drink the blood of your enemies!"],custom_data={monster:dhampir},consumable={consume_seconds:0}]

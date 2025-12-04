@@ -1,0 +1,4 @@
+src/project_jekyll/pack.mcmeta.yml -> dist/project_jekyll/pack.mcmeta
+src/project_jekyll/data/jekyll/advancement/dhampir.yml -> dist/project_jekyll/data/jekyll/advancement/dhampir.json
+src/project_jekyll/data/minecraft/tags/function/tick.yml -> dist/project_jekyll/data/minecraft/tags/function/tick.json
+src/project_jekyll/data/minecraft/tags/function/load.yml -> dist/project_jekyll/data/minecraft/tags/function/load.json

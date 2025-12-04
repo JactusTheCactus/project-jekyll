@@ -27,9 +27,6 @@ done
 find src \
 	-name "*.yml" \
 	-exec $ymlToJson {} \;
-find src \
-	-name "*.mcfunction" \
-	-exec $mcfuncFMT {} \;
 find dist \
 	-type f \
 	-name "*.yml" \

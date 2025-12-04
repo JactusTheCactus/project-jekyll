@@ -3,18 +3,17 @@ display:
     id: 'minecraft:potion'
     components:
       'minecraft:base_color': red
-  title: Vampirism
+  title: Dhampir
   description: Drink the blood of your enemies!
 criteria:
-  vampirism:
+  dhampir:
     trigger: 'minecraft:consume_item'
     conditions:
       item:
-        # items: 'minecraft:potion'
         components:
           'minecraft:custom_data':
             monster: dhampir
 requirements:
-  - - vampirism
+  - - dhampir
 rewards:
-  function: 'jekyll:vampirism/init'
+  function: 'jekyll:dhampir/init'

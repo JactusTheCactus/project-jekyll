@@ -6,17 +6,17 @@
         "minecraft:base_color": "red"
       }
     },
-    "title": "Vampirism",
+    "title": "Dhampir",
     "description": "Drink the blood of your enemies!"
   },
   "criteria": {
-    "vampirism": {
+    "dhampir": {
       "trigger": "minecraft:consume_item",
       "conditions": {
         "item": {
           "components": {
             "minecraft:custom_data": {
-              "monster": "vampire"
+              "monster": "dhampir"
             }
           }
         }
@@ -25,10 +25,10 @@
   },
   "requirements": [
     [
-      "vampirism"
+      "dhampir"
     ]
   ],
   "rewards": {
-    "function": "jekyll:vampirism/init"
+    "function": "jekyll:dhampir/init"
   }
 }
