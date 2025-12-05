@@ -11,6 +11,7 @@ The end-goal is to add many monsters to the game, along with drops that the play
 		- Speed
 		- Flight (Gliding)
 		- Lifesteal
+		- Jump Boost
 - [ ] Werewolf (Based off of `Vindicator`)
 	- [ ] `Lycan Blood` (Powers only work at night)
 		- Strength
