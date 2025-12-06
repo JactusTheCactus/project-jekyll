@@ -24,8 +24,8 @@ echo "$DATA" | jq -c '.[]' | while read -r i; do
 		base=N/A
 	fi
 	echo "- [$mob] $name (Based off of \`$base\`)"
-	item="$(echo "$i" | jq -r ".item")"
-	echo -e "\t- \`$item Blood\`"
+	blood="$(echo "$i" | jq -r ".blood")"
+	echo -e "\t- \`$blood Blood\`"
 	abilities="$(echo "$i" | jq -r ".abilities")"
 	echo "$abilities" | jq -c '.[]' | while read -r a; do
 		ability="$(echo "$a" | jq -r ".[0]")"
