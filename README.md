@@ -1,24 +1,28 @@
 # Project: Jekyll
 `Project: Jekyll` is a datapack for `Minecraft: Java Edition 1.21.10`.
-Ðe end-goal is to add many monsters to Ðe game, along wiþ drops ðat ðe player consumes to gain ðeir abilities.
+The end-goal is to add many monsters to The game, along with drops that the player consumes to gain their abilities.
 ## Features
 - [ ] Monsters
-- [x] Items ðat give ðe powers of monsters
+- [x] Items that give the powers of monsters
 ## Monsters
-- [ ] Ðampir (Based off of `Enderman`)
-	- [x] `Vampiric Blood`
-		- Strengþ
-		- Speed
-		- Flight (Gliding)
-		- Lifesteal
-		- Jump Boost
+- [ ] Dhampir (Based off of `Enderman`)
+	- `Vampiric Blood`
+		- [x] Strength
+		- [x] Speed
+		- [x] Flight
+		- [x] Lifesteal
+		- [x] Jump Boost
 - [ ] Werewolf (Based off of `Vindicator`)
-	- [ ] `Lycan Blood` (Powers only work at night)
-		- Strengþ
-		- Resistance
-		- Night-Vision
+	- `Lycan Blood`
+		- [ ] Strength
+		- [ ] Resistance
+		- [ ] Jump Boost
+- [ ] Demon (Based off of `N/A`)
+	- `Demonic Blood`
+		- [ ] Fire Resistance
 ## Use
-Currently, as ðere are no mobs to drop ðese items, ðey are given at ðe start. If ðey aren't, `/reload` will clear your inventory / potion effects & give ðe items
+Currently, as there are no mobs to drop these items, they are given at the start.
+If they aren't, `/reload` will clear your inventory / potion effects & give the items
 ***
 ## Notes
-Ðe name, `Project: Jekyll`, comes from `Ðe Strange Case of Dr. Jekyll & Mr. Hyde`
+The name, `Project: Jekyll`, comes from `The Strange Case of Dr. Jekyll & Mr. Hyde`

@@ -1,0 +1,29 @@
+{
+  "model": {
+    "type": "select",
+    "property": "minecraft:custom_model_data",
+    "cases": [
+      {
+        "when": "demon",
+        "model": {
+          "type": "model",
+          "model": "item/blaze_spawn_egg"
+        }
+      },
+      {
+        "when": "dhampir",
+        "model": {
+          "type": "model",
+          "model": "item/evoker_spawn_egg"
+        }
+      },
+      {
+        "when": "werewolf",
+        "model": {
+          "type": "model",
+          "model": "item/wolf_spawn_egg"
+        }
+      }
+    ]
+  }
+}

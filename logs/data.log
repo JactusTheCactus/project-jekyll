@@ -1,0 +1,30 @@
+Project: Jekyll/
+├── data/
+│   ├── jekyll/
+│   │   ├── advancement/
+│   │   │   ├── demon.json
+│   │   │   ├── dhampir.json
+│   │   │   ├── init.json
+│   │   │   └── werewolf.json
+│   │   └── function/
+│   │       ├── init.mcfunction
+│   │       ├── mob/
+│   │       │   ├── demon/
+│   │       │   │   ├── give.mcfunction
+│   │       │   │   └── init.mcfunction
+│   │       │   ├── dhampir/
+│   │       │   │   ├── give.mcfunction
+│   │       │   │   ├── heal.mcfunction
+│   │       │   │   └── init.mcfunction
+│   │       │   └── werewolf/
+│   │       │       ├── give.mcfunction
+│   │       │       └── init.mcfunction
+│   │       └── tick.mcfunction
+│   └── minecraft/
+│       └── tags/
+│           └── function/
+│               ├── load.json
+│               └── tick.json
+└── pack.mcmeta
+
+12 directories, 16 files

@@ -1,0 +1,34 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:blaze_spawn_egg"
+    },
+    "title": "Demon",
+    "description": "Blood For the Blood God!\nSkulls For the Skull Throne!\nMilk For the Khorne Flakes!"
+  },
+  "parent": "jekyll:init",
+  "criteria": {
+    "demon": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "components": {
+            "minecraft:custom_model_data": {
+              "strings": [
+                "demon"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "demon"
+    ]
+  ],
+  "rewards": {
+    "function": "jekyll:mob/demon/init"
+  }
+}

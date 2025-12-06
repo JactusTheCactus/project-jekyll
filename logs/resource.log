@@ -1,0 +1,18 @@
+Project: Jekyll/
+├── assets/
+│   └── minecraft/
+│       ├── items/
+│       │   └── dragon_breath.json
+│       ├── models/
+│       │   └── item/
+│       │       ├── blaze_spawn_egg.json
+│       │       ├── evoker_spawn_egg.json
+│       │       └── wolf_spawn_egg.json
+│       └── textures/
+│           └── item/
+│               ├── demon.png
+│               ├── dhampir.png
+│               └── werewolf.png
+└── pack.mcmeta
+
+8 directories, 8 files

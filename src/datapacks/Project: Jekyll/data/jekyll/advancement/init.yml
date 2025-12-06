@@ -1,0 +1,8 @@
+display:
+  icon:
+    id: minecraft:dragon_breath
+  title: Monsters
+  description: |-
+criteria:
+  tick:
+    trigger: minecraft:tick

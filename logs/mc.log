@@ -1,4 +1,1 @@
-src/project_jekyll/pack.mcmeta.yml -> dist/project_jekyll/pack.mcmeta
-src/project_jekyll/data/jekyll/advancement/dhampir.yml -> dist/project_jekyll/data/jekyll/advancement/dhampir.json
-src/project_jekyll/data/minecraft/tags/function/tick.yml -> dist/project_jekyll/data/minecraft/tags/function/tick.json
-src/project_jekyll/data/minecraft/tags/function/load.yml -> dist/project_jekyll/data/minecraft/tags/function/load.json
+[WARNING] [33m05:36:24[0m --yaml-fix-merge-anchor-to-spec is false; causing merge anchors to override the existing values which isn't to the yaml spec. This flag will default to true in late 2025.

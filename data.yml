@@ -1,0 +1,29 @@
+- - &monster
+    name: !!str
+    mob: false
+    item: !!str
+    base: !!str
+    abilities:
+- <<: *monster
+  name: Dhampir
+  item: Vampiric Blood
+  base: Enderman
+  abilities:
+    - [Strength, true]
+    - [Speed, true]
+    - [Flight, true]
+    - [Lifesteal, true]
+    - [Jump Boost, true]
+- <<: *monster
+  name: Werewolf
+  item: Lycan Blood
+  base: Vindicator
+  abilities:
+    - [Strength]
+    - [Resistance]
+    - [Jump Boost]
+- <<: *monster
+  name: Demon
+  item: Demonic Blood
+  abilities:
+    - [Fire Resistance]

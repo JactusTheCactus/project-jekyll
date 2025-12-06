@@ -1,0 +1,5 @@
+pack:
+  min_format: &fmt 69
+  max_format: *fmt
+  description: |-
+    [TEST]

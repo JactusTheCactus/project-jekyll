@@ -1,0 +1,1 @@
+give @p minecraft:dragon_breath[custom_name="Demonic Blood",lore=[],custom_model_data={strings:[demon]},consumable={consume_seconds:0}]
