@@ -1,12 +1,12 @@
 - - &monster
     name: !!str
     mob: false
-    item: !!str
+    blood: !!str
     base: !!str
     abilities:
 - <<: *monster
   name: Dhampir
-  item: Vampiric Blood
+  blood: Vampiric
   base: Enderman
   abilities:
     - [Strength, true]
@@ -16,7 +16,7 @@
     - [Jump Boost, true]
 - <<: *monster
   name: Werewolf
-  item: Lycan Blood
+  blood: Lycan
   base: Vindicator
   abilities:
     - [Strength, true]
@@ -24,11 +24,11 @@
     - [Jump Boost, true]
 - <<: *monster
   name: Demon
-  item: Demonic Blood
+  blood: Demonic
   abilities:
     - [Fire Resistance, true]
 - <<: *monster
   name: Mermaid
-  item: Mermaid Blood
+  blood: Mermaid
   abilities:
     - [Water-Breathing]
