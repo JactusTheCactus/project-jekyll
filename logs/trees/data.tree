@@ -5,7 +5,8 @@ Project: Jekyll/
 │   │   │   ├── demon.json
 │   │   │   ├── dhampir.json
 │   │   │   ├── init.json
-│   │   │   └── werewolf.json
+│   │   │   ├── mermaid.json
+│   │   │   └── wirwulf.json
 │   │   └── function/
 │   │       ├── init.mcfunction
 │   │       ├── mob/
@@ -16,7 +17,10 @@ Project: Jekyll/
 │   │       │   │   ├── give.mcfunction
 │   │       │   │   ├── heal.mcfunction
 │   │       │   │   └── init.mcfunction
-│   │       │   └── werewolf/
+│   │       │   ├── mermaid/
+│   │       │   │   ├── give.mcfunction
+│   │       │   │   └── init.mcfunction
+│   │       │   └── wirwulf/
 │   │       │       ├── give.mcfunction
 │   │       │       └── init.mcfunction
 │   │       └── tick.mcfunction
@@ -27,4 +31,4 @@ Project: Jekyll/
 │               └── tick.json
 └── pack.mcmeta
 
-12 directories, 16 files
+13 directories, 19 files

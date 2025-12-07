@@ -9,8 +9,15 @@ model:
     - when: dhampir
       model:
         type: model
-        model: item/evoker_spawn_egg
-    - when: werewolf
+        model: item/bat_spawn_egg
+    - when: mermaid
+      model:
+        type: model
+        model: item/dolphin_spawn_egg
+    - when: wirwulf
       model:
         type: model
         model: item/wolf_spawn_egg
+  fallback:
+    type: model
+    model: item/dragon_breath

@@ -14,8 +14,7 @@ criteria:
       item:
         components:
           minecraft:custom_model_data:
-            strings:
-              - demon
+            strings: [demon]
 requirements:
   - [demon]
 rewards:

@@ -1,1 +1,1 @@
-give @p minecraft:dragon_breath[custom_name="Demonic Blood",lore=[],custom_model_data={strings:[demon]},consumable={consume_seconds:0}]
+give @p minecraft:dragon_breath[custom_name="Demonic Blood",lore=["Blood For the Blood God!","Skulls For the Skull Throne!","Milk For the Khorne Flakes!"],custom_model_data={strings:[demon]},consumable={consume_seconds:0}]

@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
+shopt -s expand_aliases
+alias yq="yq --yaml-fix-merge-anchor-to-spec=true"
 exec > README.md
 cat << EOF
 # Project: Jekyll
@@ -10,28 +12,38 @@ The end-goal is to add many monsters to The game, along with drops that the play
 - [x] Items that give the powers of monsters
 ## Monsters
 EOF
-DATA="$(yq -p yaml -o json data.yml)"
-DATA="$(echo "$DATA" | jq "del(.[0])")"
+DATA="$(yq -p yaml -o json data.yml | jq "del(.[0])")"
 echo "$DATA" | jq -c '.[]' | while read -r i; do
+	void() {
+		else="${2:-null}"
+		in="$(echo "$i" | jq -r .$1)"
+		if [[ "$in" = "null" ]]; then
+			out="$else"
+		else
+			out="$in"
+		fi
+		echo "$out"
+	}
 	name="$(echo "$i" | jq -r ".name")"
 	mob="$(echo "$i" | jq -r ".mob")"
 	case $mob in
-		true)mob="x";;
-		false)mob=" ";;
+		0)mob="x";;
+		*)mob=" ";;
 	esac
-	base="$(echo "$i" | jq -r ".base")"
-	if [[ -z $base ]]; then
-		base=N/A
+	base="$(void base)"
+	title="- [$mob] $name"
+	if [[ "$base" != "null" ]]; then
+		title+=" (Based off of \`$base\`)"
 	fi
-	echo "- [$mob] $name (Based off of \`$base\`)"
-	blood="$(echo "$i" | jq -r ".blood")"
+	echo $title
+	blood="$(void blood $name)"
 	echo -e "\t- \`$blood Blood\`"
 	abilities="$(echo "$i" | jq -r ".abilities")"
 	echo "$abilities" | jq -c '.[]' | while read -r a; do
 		ability="$(echo "$a" | jq -r ".[0]")"
 		complete="$(echo "$a" | jq -r ".[1]")"
 		case $complete in
-			true)complete="x";;
+			0)complete="x";;
 			*)complete=" ";;
 		esac
 		echo -e "\t\t- [$complete] $ability"

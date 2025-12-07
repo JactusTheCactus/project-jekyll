@@ -1,1 +1,0 @@
-give @p minecraft:dragon_breath[custom_name="Lycan Blood",lore=["Unleash the beast inside!"],custom_model_data={strings:[werewolf]},consumable={consume_seconds:0}]

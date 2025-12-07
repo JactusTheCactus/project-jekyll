@@ -1,19 +1,19 @@
 display:
   icon:
-    id: minecraft:bat_spawn_egg
-  title: Dhampir
+    id: minecraft:wolf_spawn_egg
+  title: Wirwulf
   description: |-
-    Drink the blood of your enemies!
+    Unleash the beast inside!
 parent: jekyll:init
 criteria:
-  dhampir:
+  wirwulf:
     trigger: minecraft:consume_item
     conditions:
       item:
         components:
           minecraft:custom_model_data:
-            strings: [dhampir]
+            strings: [wirwulf]
 requirements:
-  - [dhampir]
+  - [wirwulf]
 rewards:
-  function: jekyll:mob/dhampir/init
+  function: jekyll:mob/wirwulf/init

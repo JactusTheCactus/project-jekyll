@@ -1,20 +1,18 @@
 display:
   icon:
-    id: minecraft:wolf_spawn_egg
-  title: Werewolf
+    id: minecraft:dolphin_spawn_egg
+  title: Mermaid
   description: |-
-    Unleash the beast inside!
 parent: jekyll:init
 criteria:
-  werewolf:
+  mermaid:
     trigger: minecraft:consume_item
     conditions:
       item:
         components:
           minecraft:custom_model_data:
-            strings:
-              - werewolf
+            strings: [mermaid]
 requirements:
-  - [werewolf]
+  - [mermaid]
 rewards:
-  function: jekyll:mob/werewolf/init
+  function: jekyll:mob/mermaid/init

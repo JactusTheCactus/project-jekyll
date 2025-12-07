@@ -1,34 +1,69 @@
 - - &monster
     name:
-    mob: false
+    mob: 1
     blood:
     base:
-    abilities:
+    abilities: []
+    desc: []
+    effects: []
+- <<: *monster
+  name: Demon
+  blood: Demonic
+  abilities:
+    - [Health Boost, 0]
+    - [Strength, 0]
+    - [Fire Resistance, 0]
+  desc:
+    - Blood For the Blood God!
+    - Skulls For the Skull Throne!
+    - Milk For the Khorne Flakes!
+  effects:
+    - [health_boost, 99]
+    - [strength, 99]
+    - [fire_resistance, 99]
 - <<: *monster
   name: Dhampir
   blood: Vampiric
   base: Enderman
   abilities:
-    - [Strength, true]
-    - [Speed, true]
-    - [Flight, true]
-    - [Lifesteal, true]
-    - [Jump Boost, true]
+    - [Strength, 0]
+    - [Speed, 0]
+    - [Flight, 0]
+    - [Lifesteal, 0]
+    - [Jump Boost, 0]
+    - [Night Vision, 0]
+    - [Health Boost, 0]
+  desc:
+    - Heal upon dealing damage
+    - Drink the blood of your enemies!
+  effects:
+    - [health_boost, 99]
+    - [speed, 24]
+    - [jump_boost, 9]
+    - [strength, 99]
+    - [night_vision, 99]
 - <<: *monster
-  name: Werewolf
+  name: Mermaid
+  base: Dolphin
+  abilities:
+    - [Water-Breathing, 0]
+    - [Swim Boost, 0]
+  effects:
+    - [water_breathing, 99]
+    - [dolphins_grace, 99]
+- <<: *monster
+  name: Wirwulf
   blood: Lycan
   base: Vindicator
   abilities:
-    - [Strength, true]
-    - [Resistance, true]
-    - [Jump Boost, true]
-- <<: *monster
-  name: Demon
-  blood: Demonic
-  abilities:
-    - [Fire Resistance, true]
-- <<: *monster
-  name: Mermaid
-  blood: Mermaid
-  abilities:
-    - [Water-Breathing]
+    - [Strength, 0]
+    - [Resistance, 0]
+    - [Jump Boost, 0]
+    - [Health Boost, 0]
+  desc:
+    - Unleash the beast inside!
+  effects:
+    - [health_boost, 99]
+    - [jump_boost, 9]
+    - [strength, 99]
+    - [resistance, 4]

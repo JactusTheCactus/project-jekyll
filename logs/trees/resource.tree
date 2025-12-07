@@ -5,14 +5,17 @@ Project: Jekyll/
 │       │   └── dragon_breath.json
 │       ├── models/
 │       │   └── item/
+│       │       ├── bat_spawn_egg.json
 │       │       ├── blaze_spawn_egg.json
-│       │       ├── evoker_spawn_egg.json
+│       │       ├── dolphin_spawn_egg.json
 │       │       └── wolf_spawn_egg.json
 │       └── textures/
 │           └── item/
 │               ├── demon.png
 │               ├── dhampir.png
-│               └── werewolf.png
+│               ├── dragon_breath.png
+│               ├── mermaid.png
+│               └── wirwulf.png
 └── pack.mcmeta
 
-8 directories, 8 files
+8 directories, 11 files
