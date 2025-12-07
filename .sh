@@ -21,23 +21,19 @@ done
 exec > "$LOG" 2>& 1
 alias yq="yq --yaml-fix-merge-anchor-to-spec=true"
 alias tree="tree -F"
+declare -A script
 for f in scripts/*; do
 	f="${f#scripts/}"
 	f="${f%.sh}"
 	s="./scripts/$f.sh"
 	chmod +x "$s"
-	eval "$(cat << EOF
-$f() {
-	"$s" "$@"
-}
-EOF
-)"
+	script["$f"]="$s"
 done
 for i in src/*; do
 	cp -r "$i" dist
 done
-pre
-find src -name "*.yml" -exec ymlToJson {} \;
+"${script[pre]}"
+find src -name "*.yml" -exec "${script[ymlToJson]}" {} \;
 find dist -name "*.yml" -delete
 copyTexture() {
 	cp \
@@ -73,5 +69,5 @@ for i in data resource; do
 		tree "$NAME" -o "../../logs/trees/$i.tree"
 	)
 done
-readme
+"${script[readme]}"
 find logs -empty -delete
