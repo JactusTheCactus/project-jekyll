@@ -39,14 +39,8 @@ echo "$DATA" | jq -c '.[]' | while read -r i; do
 	blood="$(void blood $name)"
 	echo -e "\t- \`$blood Blood\`"
 	abilities="$(echo "$i" | jq -r ".abilities")"
-	echo "$abilities" | jq -c '.[]' | while read -r a; do
-		ability="$(echo "$a" | jq -r ".[0]")"
-		complete="$(echo "$a" | jq -r ".[1]")"
-		case $complete in
-			0)complete="x";;
-			*)complete=" ";;
-		esac
-		echo -e "\t\t- [$complete] $ability"
+	echo "$abilities" | jq -c '.[]' | while read -r ability; do
+		echo -e "\t\t- $ability"
 	done
 done
 cat << EOF
