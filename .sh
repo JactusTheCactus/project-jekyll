@@ -18,14 +18,14 @@ for i in "${DIRS[@]}"; do
 	rm -rf "$i" || :
 	mkdir -p "$i"
 done
-exec > $LOG 2>& 1
+exec > "$LOG" 2>& 1
 alias yq="yq --yaml-fix-merge-anchor-to-spec=true"
 alias tree="tree -F"
 for f in scripts/*; do
 	f="${f#scripts/}"
 	f="${f%.sh}"
-	s=./scripts/$f.sh
-	chmod +x $s
+	s="./scripts/$f.sh"
+	chmod +x "$s"
 	eval "$(cat << EOF
 $f() {
 	"$s" "$@"
@@ -34,10 +34,10 @@ EOF
 )"
 done
 for i in src/*; do
-	cp -r $i dist
+	cp -r "$i" dist
 done
 pre
-find src -name "*.yml" -exec $ymlToJson {} \;
+find src -name "*.yml" -exec ymlToJson {} \;
 find dist -name "*.yml" -delete
 copyTexture() {
 	cp \
