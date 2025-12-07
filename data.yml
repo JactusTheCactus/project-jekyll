@@ -10,9 +10,9 @@
   name: Demon
   blood: Demonic
   abilities:
-    - [Health Boost, 0]
-    - [Strength, 0]
-    - [Fire Resistance, 0]
+    - Health Boost
+    - Strength
+    - Fire Resistance
   desc:
     - Blood For the Blood God!
     - Skulls For the Skull Throne!
@@ -26,13 +26,13 @@
   blood: Vampiric
   base: Enderman
   abilities:
-    - [Strength, 0]
-    - [Speed, 0]
-    - [Flight, 0]
-    - [Lifesteal, 0]
-    - [Jump Boost, 0]
-    - [Night Vision, 0]
-    - [Health Boost, 0]
+    - Strength
+    - Speed
+    - Flight
+    - Lifesteal
+    - Jump Boost
+    - Night Vision
+    - Health Boost
   desc:
     - Heal upon dealing damage
     - Drink the blood of your enemies!
@@ -46,8 +46,8 @@
   name: Mermaid
   base: Dolphin
   abilities:
-    - [Water-Breathing, 0]
-    - [Swim Boost, 0]
+    - Water-Breathing
+    - Swim Boost
   effects:
     - [water_breathing, 99]
     - [dolphins_grace, 99]
@@ -56,10 +56,10 @@
   blood: Lycan
   base: Vindicator
   abilities:
-    - [Strength, 0]
-    - [Resistance, 0]
-    - [Jump Boost, 0]
-    - [Health Boost, 0]
+    - Strength
+    - Resistance
+    - Jump Boost
+    - Health Boost
   desc:
     - Unleash the beast inside!
   effects:
