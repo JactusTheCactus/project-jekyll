@@ -6,5 +6,6 @@ o="dist/${1#src/}"
 o="${o%.yml}"
 case "${1#*.}" in
 	yml)o="$o.json";;
+	*);;
 esac
 yq -p yaml -o json "$i" > "$o"
