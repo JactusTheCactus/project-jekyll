@@ -1,8 +1,8 @@
 - - &monster
-    name: !!str
+    name:
     mob: false
-    blood: !!str
-    base: !!str
+    blood:
+    base:
     abilities:
 - <<: *monster
   name: Dhampir
