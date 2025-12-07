@@ -8,7 +8,4 @@ case "${i#*.}" in
 	mcmeta.yml)o="${o%.yml}";;
 	*);;
 esac
-yq \
-	-p yaml \
-	-o json "$i" \
-	> "$o"
+yq -p yaml -o json "$i" > "$o"
