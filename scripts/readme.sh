@@ -62,13 +62,7 @@ el html:body $(
 		done
 	)
 	el h2 Use
-	el p $(
-		echo Currently, as there are no mobs to drop these items,
-		echo they are given at the start.
-		echo If they "aren't," $(el code /reload)
-		echo will clear your inventory / potion effects
-		echo "&" give the items
-	)
+	el p Currently, as there are no mobs to drop these items, they are given at the start. If they "aren't," $(el code /reload) will clear your inventory / potion effects "&" give the items
 	el h2 Notes
 	el p The name, $(el q $name,) comes from $(el q The Strange Case of Dr. Jekyll "&" Mr. Hyde)
 )
