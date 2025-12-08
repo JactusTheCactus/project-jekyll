@@ -38,25 +38,23 @@ name="Project: Jekyll"
 el html:body $(
 	el h1 $name
 	el p $(el q $name) is a datapack for $(el q Minecraft: Java Edition $(el code 1.21.10)). The end-goal is to add many monsters to the game, along with drops that the player consumes to gain their abilities.
-	)
 	el h2 Features
 	el ul $(
 		el li Monsters
 		el li Items that give the powers of monsters
 	)
 	el h2 Monsters
-	el ul $(
+	el dl $(
 		yq data/data.yml -p yaml -o json | jq -c .[] | while read -r i
 		do
 			name=$(get "$i" name)
 			base=$(get "$i" base)
 			blood=$(get "$i" blood)
 			ab=$(get "$i" abilities[])
-			el li $(
-				echo $name
-				el ul $(
+			el dt $name
+			el dd $(
 					if void "$base"
-						then el li Based off of $(el code $base)
+						then el dd Based off of $(el code $base)
 					fi
 					el li $(
 						el code $(void $blood $name) Blood
@@ -64,7 +62,6 @@ el html:body $(
 							do el li $a
 						done)
 					)
-				)
 			)
 		done
 	)
