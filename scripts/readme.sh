@@ -52,17 +52,13 @@ el html:body $(
 			blood=$(get "$i" blood)
 			ab=$(get "$i" abilities[])
 			el dt $name
-			el dd $(
-				if void "$base"
-					then el dd Based off of $(el code $base)
-				fi
-				el li $(
-					el code $(void $blood $name) Blood
-					el ul $(echo "$ab" | while read -r a
-						do el li $a
-					done)
-				)
-			)
+			if void "$base"
+				then el dd Based off of $(el code $base)
+			fi
+			el dd:code $(void $blood $name) Blood
+			el dd:ul $(echo "$ab" | while read -r a
+				do el li $a
+			done)
 		done
 	)
 	el h2 Use
