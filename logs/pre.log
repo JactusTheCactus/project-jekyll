@@ -1,0 +1,8 @@
+> dist/datapacks/Project: Jekyll/data/jekyll/function/mob/demon/give.mcfunction
+give @p minecraft:dragon_breath[custom_name="Demonic Blood",lore=["Blood For the Blood God!","Skulls For the Skull Throne!","Milk For the Khorne Flakes!"],custom_model_data={strings:[demon]},consumable={consume_seconds:0}]
+> dist/datapacks/Project: Jekyll/data/jekyll/function/mob/dhampir/give.mcfunction
+give @p minecraft:dragon_breath[custom_name="Vampiric Blood",lore=["Heal upon dealing damage","Drink the blood of your enemies!"],custom_model_data={strings:[dhampir]},consumable={consume_seconds:0}]
+> dist/datapacks/Project: Jekyll/data/jekyll/function/mob/mermaid/give.mcfunction
+give @p minecraft:dragon_breath[custom_name="Mermaid Blood",custom_model_data={strings:[mermaid]},consumable={consume_seconds:0}]
+> dist/datapacks/Project: Jekyll/data/jekyll/function/mob/wirwulf/give.mcfunction
+give @p minecraft:dragon_breath[custom_name="Lycan Blood",lore=["Unleash the beast inside!"],custom_model_data={strings:[wirwulf]},consumable={consume_seconds:0}]

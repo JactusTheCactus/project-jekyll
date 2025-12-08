@@ -2,39 +2,39 @@
   "model": {
     "type": "select",
     "property": "minecraft:custom_model_data",
+    "fallback": {
+      "type": "model",
+      "model": "item/dragon_breath"
+    },
     "cases": [
       {
+        "type": "model",
         "when": "demon",
         "model": {
-          "type": "model",
           "model": "item/blaze_spawn_egg"
         }
       },
       {
+        "type": "model",
         "when": "dhampir",
         "model": {
-          "type": "model",
           "model": "item/bat_spawn_egg"
         }
       },
       {
+        "type": "model",
         "when": "mermaid",
         "model": {
-          "type": "model",
           "model": "item/dolphin_spawn_egg"
         }
       },
       {
+        "type": "model",
         "when": "wirwulf",
         "model": {
-          "type": "model",
           "model": "item/wolf_spawn_egg"
         }
       }
-    ],
-    "fallback": {
-      "type": "model",
-      "model": "item/dragon_breath"
-    }
+    ]
   }
 }

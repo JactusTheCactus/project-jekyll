@@ -7,28 +7,28 @@ The end-goal is to add many monsters to The game, along with drops that the play
 ## Monsters
 - [ ] Demon
 	- `Demonic Blood`
-		- [x] Health Boost
-		- [x] Strength
-		- [x] Fire Resistance
+		- "Health Boost"
+		- "Strength"
+		- "Fire Resistance"
 - [ ] Dhampir (Based off of `Enderman`)
 	- `Vampiric Blood`
-		- [x] Strength
-		- [x] Speed
-		- [x] Flight
-		- [x] Lifesteal
-		- [x] Jump Boost
-		- [x] Night Vision
-		- [x] Health Boost
+		- "Strength"
+		- "Speed"
+		- "Flight"
+		- "Lifesteal"
+		- "Jump Boost"
+		- "Night Vision"
+		- "Health Boost"
 - [ ] Mermaid (Based off of `Dolphin`)
 	- `Mermaid Blood`
-		- [x] Water-Breathing
-		- [x] Swim Boost
+		- "Water-Breathing"
+		- "Swim Boost"
 - [ ] Wirwulf (Based off of `Vindicator`)
 	- `Lycan Blood`
-		- [x] Strength
-		- [x] Resistance
-		- [x] Jump Boost
-		- [x] Health Boost
+		- "Strength"
+		- "Resistance"
+		- "Jump Boost"
+		- "Health Boost"
 ## Use
 Currently, as there are no mobs to drop these items, they are given at the start.
 If they aren't, `/reload` will clear your inventory / potion effects & give the items
