@@ -5,15 +5,20 @@ alias yq="yq --yaml-fix-merge-anchor-to-spec=true"
 exec > README.html
 exec 2> logs/readme.log
 el() {
-	e="${1:-hr}"
-	t="${@:2}"
+	e=${1:-hr}
+	t=${@:2}
 	tag="<$e>$t</$e>"
-	case "$e" in
-		hr)o="<$e>";;
-		html)o="<!DOCTYPE html>$tag";;
-		ul:li)o="$(el ul "$(el li "$t")")";;
-		*)o="$tag";;
-	esac
+	first=${e%%:*}
+	rest=${e#*:}
+	if ! [[ $first = $e && $rest = $e ]]
+		then o=$(el $first $(el $rest $t))
+		else
+			case $e in
+				hr)o="<$e>";;
+				html)o="<!DOCTYPE html>$tag";;
+				*)o=$tag;;
+			esac
+	fi
 	echo $o | perl -pe 's/\n//g'
 }
 void() {
@@ -30,51 +35,50 @@ get() {
 	echo "$1" | jq -r ".$2"
 }
 name="Project: Jekyll"
-el html "$(
-	el body "$(
-		el h1 $name
-		el p $(
-			echo $(el q $name) is a datapack for $(el q Minecraft: Java Edition $(el code 1.21.10)).
-			echo The end-goal is to add many monsters to the game,
-			echo along with drops that the player consumes to gain their abilities.
-		)
-		el h2 Features
-		el ul $(
-			el li Monsters
-			el li Items that give the powers of monsters
-		)
-		el h2 "Monsters"
-		yq data/data.yml -p yaml -o json | jq -c ".[]" | while read -r i
+el html:body $(
+	el h1 $name
+	el p $(
+		echo $(el q $name) is a datapack for $(el q Minecraft: Java Edition $(el code 1.21.10)).
+		echo The end-goal is to add many monsters to the game,
+		echo along with drops that the player consumes to gain their abilities.
+	)
+	el h2 Features
+	el ul $(
+		el li Monsters
+		el li Items that give the powers of monsters
+	)
+	el h2 Monsters
+	el ul $(
+		yq data/data.yml -p yaml -o json | jq -c .[] | while read -r i
 		do
-			name="$(get "$i" name)"
-			base="$(get "$i" base)"
-			blood="$(get "$i" blood)"
-			ab="$(get "$i" abilities[])"
-			el ul:li "$(
-				echo "$name"
-				el ul "$(
+			name=$(get "$i" name)
+			base=$(get "$i" base)
+			blood=$(get "$i" blood)
+			ab=$(get "$i" abilities[])
+			el li $(
+				echo $name
+				el ul $(
 					if void "$base"
-						then el li "Based off of $(el code "$base")"
+						then el li Based off of $(el code $base)
 					fi
-					el li "$(
-						el code "$(void "$blood" "$name") Blood"
-						el ul "$(echo "$ab" | while read -r a
-							do el li "$a"
-						done)"
-					)"
-				)"
-			)"
+					el li $(
+						el code $(void $blood $name) Blood
+						el ul $(echo "$ab" | while read -r a
+							do el li $a
+						done)
+					)
+				)
+			)
 		done
-		el h2 "Use"
-		el p "$(cat << EOF
-Currently, as there are no mobs to drop these items,
-they are given at the start.
-If they aren't, $(el code "/reload")
-will clear your inventory / potion effects
-& give the items
-EOF
-)"
-		el h2 "Notes"
-		el p "The name, $(el q "$name,") comes from $(el q "The Strange Case of Dr. Jekyll & Mr. Hyde")"
-	)"
-)"
+	)
+	el h2 Use
+	el p $(
+		echo Currently, as there are no mobs to drop these items,
+		echo they are given at the start.
+		echo If they "aren't," $(el code /reload)
+		echo will clear your inventory / potion effects
+		echo "&" give the items
+	)
+	el h2 Notes
+	el p The name, $(el q $name,) comes from $(el q The Strange Case of Dr. Jekyll "&" Mr. Hyde)
+)
