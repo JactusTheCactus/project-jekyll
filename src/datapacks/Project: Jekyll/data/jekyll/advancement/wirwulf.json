@@ -1,1 +1,0 @@
-{"display":{"icon":{"id":"minecraft:wolf_spawn_egg"},"title":"Wirwulf","description":"Unleash the beast inside!"},"parent":"jekyll:init","criteria":{"wirwulf":{"trigger":"minecraft:consume_item","conditions":{"item":{"components":{"minecraft:custom_model_data":{"strings":["wirwulf"]}}}}}},"requirements":[["wirwulf"]],"rewards":{"function":"jekyll:mob/wirwulf/init"}}

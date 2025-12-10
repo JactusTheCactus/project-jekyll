@@ -1,1 +1,0 @@
-{"display":{"icon":{"id":"minecraft:dolphin_spawn_egg"},"title":"Mermaid","description":""},"parent":"jekyll:init","criteria":{"mermaid":{"trigger":"minecraft:consume_item","conditions":{"item":{"components":{"minecraft:custom_model_data":{"strings":["mermaid"]}}}}}},"requirements":[["mermaid"]],"rewards":{"function":"jekyll:mob/mermaid/init"}}

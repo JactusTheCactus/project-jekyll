@@ -1,1 +1,0 @@
-{"display":{"icon":{"id":"minecraft:bat_spawn_egg"},"title":"Dhampir","description":"Drink the blood of your enemies!"},"parent":"jekyll:init","criteria":{"dhampir":{"trigger":"minecraft:consume_item","conditions":{"item":{"components":{"minecraft:custom_model_data":{"strings":["dhampir"]}}}}}},"requirements":[["dhampir"]],"rewards":{"function":"jekyll:mob/dhampir/init"}}

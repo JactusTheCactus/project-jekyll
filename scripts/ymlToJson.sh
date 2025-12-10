@@ -6,8 +6,8 @@ if ! grep -qw "$(echo "$1" | perl -pe 's|\./(.*?)\.yml|$1|g')" .ymlignore
 	then yq -p yaml -o json "$1" \
 		| jq -c "." \
 		> "$(echo "$1" | perl -pe '
-			s|^(?<=\./)src|dist|g;
-			s|yml$|json|g;
-			s|(\.\w+)\.json$|$1|g;
+			s|src|dist|g;
+			s|yml|json|g;
+			s|(\.\w+)\.json|$1|g;
 		')"
 fi

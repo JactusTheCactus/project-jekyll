@@ -3,6 +3,15 @@ set -euo pipefail
 shopt -s expand_aliases
 alias yq="yq --yaml-fix-merge-anchor-to-spec=true"
 exec > "logs/pre.log" 2>& 1
+get() {
+	echo "$1" | jq -r ".${2:-}"
+}
+void() {
+	if [[ "$1" = "null" ]]
+		then echo "${2:-N/A}"
+		else echo "$1"
+	fi
+}
 yq data/data.yml \
 		-p yaml \
 		-o json \
@@ -15,16 +24,12 @@ do
 		echo "${t_,,}"
 	)/give.mcfunction"
 	echo "give @p minecraft:dragon_breath[custom_name=\"$(
-		g_="$(echo "$m" | jq -r ".blood")"
-		if [[ -z "$g_" ]]; then
-			echo "$m" | jq -r ".name"
-		else
-			echo "$g_"
-		fi
+		g_="$(get "$m" "blood")"
+		void "$(echo "$m" | jq -r ".blood")" "$(echo "$m" | jq -r ".name")"
 	) Blood\",$(
 		g_="$(echo "$m" | jq -c ".desc")"
-		if [[ "$g_" != "[]" ]]; then
-			echo "lore=$g_,"
+		if [[ "$g_" != "null" ]]
+			then echo "lore=$g_,"
 		fi
 	)custom_model_data={$(
 		g_="$(echo "$m" | jq -r ".name")"
