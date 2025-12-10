@@ -48,7 +48,7 @@ cap() {
 md() {
 	perl -pe '
 		s/\s*(?:id|class)=".*?"\s*//g;
-		s|<(span)>(.*?)</\1>|$2|g;
+		s|<(span)>(.*?)</$1>|$2|g;
 	'
 }
 title="Project: Jekyll"
