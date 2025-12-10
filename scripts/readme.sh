@@ -45,7 +45,7 @@ get() {
 cap() {
 	perl -pe 's|\b(\w)(\w*)\b|\u$1\L$2|g'
 }
-strip() {
+md() {
 	perl -pe 's/\s*(?:id|class)=".*?"\s*//g'
 }
 title="Project: Jekyll"
@@ -91,4 +91,4 @@ el html $(
 	)
 	el body $body
 ) > index.html
-echo $body | strip > README.md
+echo $body | md > README.md
