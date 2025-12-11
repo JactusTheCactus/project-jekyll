@@ -19,11 +19,11 @@ yq data/data.yml \
 		| while read -r m
 do
 	echo "$(
-		echo "$m" | jq -c ".effects.[]" | while read -r e
-			do echo "effect give @s minecraft:$(echo "$e" | jq -r ".[0]") infinite $(echo "$e" | jq -r "(.[1]|numbers) // 99" 2> /dev/null) true"
+		echo "$m" | jq -c ".effects[]" | while read -r e
+			do echo "effect give @s minecraft:$(echo "$e" | jq -r ".[0]") infinite $(echo "$e" | jq ".[1] // 99") true"
 		done
 		echo "effect give @s minecraft:instant_health 10 99 true"
-		echo "$m" | jq -c ".gear.[]" | while read -r g
+		echo "$m" | jq -c ".gear[]?" | while read -r g
 			do echo "item replace entity @p $(echo "$g" \
 				| jq -r ".slot"
 			) with $(echo "$g" \
@@ -33,7 +33,8 @@ do
 				| jq ".enchantments[]" \
 				| while read -r n
 				do printf "%s," $(echo "$n" | jq -r ".")
-			done | perl -pe 's|,$||')"]
+			done | perl -pe 's|,$||'
+			)"]
 		done
 		name="$(echo "$m" | jq -r ".name")"
 		echo "advancement revoke @s only jekyll:$name $name"
