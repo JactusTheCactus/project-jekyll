@@ -68,11 +68,17 @@ items:
       type: array
       items:
         type: array
-        minItems: &len 2
-        maxItems: *len
+        minItems: &effectLen 2
+        maxItems: *effectLen
         items:
           - type: string
           - type: integer
         additionalItems: false
+    items:
+      description: >-
+        [-]
+      type: array
+      items:
+        type: string
   required:
     - name
