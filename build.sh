@@ -15,24 +15,16 @@ DIRS=(
 	dist
 	"dist/datapacks/$NAME/data/jekyll/function/mob"
 )
-DIRS+=("dist/datapacks/$NAME/data/jekyll/function/mob/demon")
-DIRS+=("dist/datapacks/$NAME/data/jekyll/function/mob/dhampir")
-DIRS+=("dist/datapacks/$NAME/data/jekyll/function/mob/mermaid")
-DIRS+=("dist/datapacks/$NAME/data/jekyll/function/mob/wirwulf")
-yq data/data.yml -p yaml -o json | jq -c ".[]" | while read -r m
-	do
-		DIRS+=("dist/datapacks/$NAME/data/jekyll/function/mob/$(echo "$m" | jq -r ".name")")
-done
-DOCS=src/main/docs
-LOG=logs/build.log
-printf '%s\n' "${DIRS[@]}"
+while read -r m
+	do DIRS+=("dist/datapacks/$NAME/data/jekyll/function/mob/$(echo "$m" | jq -r ".name")")
+done < <(yq data/data.yml -p yaml -o json | jq -c ".[]")
 for i in "${DIRS[@]}"
 	do
 		rm -rf "$i" || :
 		mkdir -p "$i"
 done
 find . -name "*.json" -delete
-exec > "$LOG" 2>& 1
+exec > "logs/build.log" 2>& 1
 alias tree="tree -F"
 script() {
 	./scripts/$1.sh "${@:2}"
