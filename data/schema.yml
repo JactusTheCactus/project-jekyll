@@ -43,8 +43,8 @@ items:
       type: array
       items:
         type: array
-        minItems: &effectLen 2
-        maxItems: *effectLen
+        minItems: 1
+        maxItems: 2
         items:
           - type: string
           - type: integer

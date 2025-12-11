@@ -11,6 +11,7 @@ NAME="Project: Jekyll"
 DIRS=(
 	dist
 	logs
+	logs/pre
 	logs/trees
 )
 DOCS=src/main/docs
@@ -74,3 +75,4 @@ for i in data resource
 done
 script readme
 find logs -empty -delete
+find . -name ".gitkeep" -exec echo {} \;

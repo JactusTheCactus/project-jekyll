@@ -10,9 +10,9 @@
     - Skulls For the Skull Throne!
     - Milk For the Khorne Flakes!
   effects:
-    - [health_boost, 99]
-    - [strength, 99]
-    - [fire_resistance, 99]
+    - [health_boost]
+    - [strength]
+    - [fire_resistance]
 - name: dhampir
   blood: vampiric
   base: enderman
@@ -28,11 +28,11 @@
     - Heal upon dealing damage
     - Drink the blood of your enemies!
   effects:
-    - [health_boost, 99]
+    - [health_boost]
     - [speed, 24]
     - [jump_boost, 9]
-    - [strength, 99]
-    - [night_vision, 99]
+    - [strength]
+    - [night_vision]
   gear:
     - slot: armor.chest
       item: elytra
@@ -42,8 +42,8 @@
     - water-breathing
     - swim boost
   effects:
-    - [water_breathing, 99]
-    - [dolphins_grace, 99]
+    - [water_breathing]
+    - [dolphins_grace]
 - name: wirwulf
   blood: lycan
   base: vindicator
@@ -55,7 +55,7 @@
   desc:
     - Unleash the beast inside!
   effects:
-    - [health_boost, 99]
+    - [health_boost]
     - [jump_boost, 9]
-    - [strength, 99]
+    - [strength]
     - [resistance, 4]

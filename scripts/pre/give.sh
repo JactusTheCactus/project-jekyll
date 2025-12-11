@@ -5,7 +5,7 @@ yml() {
 		--yaml-fix-merge-anchor-to-spec=true \
 		"$@"
 }
-exec > "logs/pre.log" 2>& 1
+exec > "logs/pre/give.log" 2>& 1
 get() {
 	echo "$1" | jq -r ".${2:-}"
 }

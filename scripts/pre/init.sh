@@ -2,7 +2,7 @@
 set -euo pipefail
 shopt -s expand_aliases
 alias yq="yq --yaml-fix-merge-anchor-to-spec=true"
-exec > "logs/pre.log" 2>& 1
+exec > "logs/pre/init.log" 2>& 1
 get() {
 	echo "$1" | jq -r ".${2:-}"
 }
@@ -20,7 +20,7 @@ yq data/data.yml \
 do
 	echo "$(
 		echo "$m" | jq -c ".effects.[]" | while read -r e
-			do echo "effect give @s minecraft:$(echo "$e" | jq -r ".[0]") infinite $(echo "$e" | jq -r ".[-1]") true"
+			do echo "effect give @s minecraft:$(echo "$e" | jq -r ".[0]") infinite $(echo "$e" | jq -r "(.[1]|numbers) // 99" 2> /dev/null) true"
 		done
 		echo "effect give @s minecraft:instant_health 10 99 true"
 		echo "$m" | jq -c ".gear.[]" | while read -r g
